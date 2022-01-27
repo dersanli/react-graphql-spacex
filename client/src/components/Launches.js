@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import LaunchItem from './LaunchItem';
+import MissionKey from './MissionKey';
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -33,6 +34,7 @@ const Launches = () => {
   return (
     <Fragment>
       <h1 className="display-4 my-3">Launches</h1>
+      <MissionKey />
       {data.launches.map((launch, index) => (
         <LaunchItem key={launch.flight_number + index} launch={launch} />
       ))}
