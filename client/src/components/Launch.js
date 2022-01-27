@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -36,7 +36,7 @@ const Launch = () => {
   } = data.launch;
 
   return (
-    <Fragment>
+    <>
       <h1 className="display-4 my-3">
         <span className="text-dark">Mission: </span>
         {mission_name}
@@ -67,7 +67,7 @@ const Launch = () => {
         }}>
         Back
       </button>
-    </Fragment>
+    </>
   );
 };
 
